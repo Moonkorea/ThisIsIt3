@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Question4Fragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/questionBtn"
+            android:text="질문"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/categoryBtn"
+            android:text="카테고리"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/randomBtn"
+            android:text="랜덤"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="120dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="4. 어떤 상황에서의 식사인가요?"
+            android:textSize="30sp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/lunchBtn"
+            android:text="점심식사"
+            android:layout_width="200dp"
+            android:layout_height="50dp"/>
+
+
+        <Button
+            android:id="@+id/dinnerBtn"
+            android:text="저녁식사"
+            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/dateBtn"
+            android:text="소개팅 or 데이트"
+            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/anniversaryBtn"
+            android:text="기념일"
+            android:layout_marginTop="15dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"/>
+
+
+        <Button
+            android:id="@+id/relieveBtn"
+            android:text="해장"
+            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/drunkBtn"
+            android:text="술자리"
+            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

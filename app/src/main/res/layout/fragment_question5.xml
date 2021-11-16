@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Question5Fragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/questionBtn"
+            android:text="질문"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/categoryBtn"
+            android:text="카테고리"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/randomBtn"
+            android:text="랜덤"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="120dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="5. 다음 카테고리 중에 \n안 땡기는 게 있나요?(중복)"
+            android:textSize="25sp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/koreaBtn"
+            android:text="한식"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"/>
+
+
+        <Button
+            android:id="@+id/chinaBtn"
+            android:text="중식"
+            android:layout_width="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/japanBtn"
+            android:text="일식"
+            android:layout_width="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:id="@+id/westBtn"
+            android:text="양식"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
