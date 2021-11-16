@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.navigation.findNavController
 import com.jungsoo.thisisit.QuestionFragment
 
-class Question2Fragment : QuestionFragment() {
+class Question2Fragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
