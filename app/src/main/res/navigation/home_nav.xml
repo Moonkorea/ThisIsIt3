@@ -130,5 +130,35 @@
         <action
             android:id="@+id/action_question7Fragment_to_randomFragment"
             app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_question7Fragment_to_question8Fragment"
+            app:destination="@id/question8Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/question8Fragment"
+        android:name="com.jungsoo.thisisit.Question8Fragment"
+        android:label="fragment_question8"
+        tools:layout="@layout/fragment_question8" >
+        <action
+            android:id="@+id/action_question8Fragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_question8Fragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_question8Fragment_to_question9Fragment"
+            app:destination="@id/question9Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/question9Fragment"
+        android:name="com.jungsoo.thisisit.Question9Fragment"
+        android:label="fragment_question9"
+        tools:layout="@layout/fragment_question9" >
+        <action
+            android:id="@+id/action_question9Fragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_question9Fragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
     </fragment>
 </navigation>
