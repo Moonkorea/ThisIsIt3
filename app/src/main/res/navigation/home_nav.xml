@@ -312,5 +312,35 @@
         <action
             android:id="@+id/action_question9Fragment_to_randomFragment"
             app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_question9Fragment_to_howAboutThisFragment"
+            app:destination="@id/howAboutThisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/howAboutThisFragment"
+        android:name="com.jungsoo.thisisit.HowAboutThisFragment"
+        android:label="fragment_how_about_this"
+        tools:layout="@layout/fragment_how_about_this" >
+        <action
+            android:id="@+id/action_howAboutThisFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_howAboutThisFragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_howAboutThisFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.jungsoo.thisisit.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
     </fragment>
 </navigation>

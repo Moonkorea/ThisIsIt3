@@ -28,6 +28,14 @@ class Question9Fragment : Fragment() {
             it.findNavController().navigate(R.id.action_question9Fragment_to_randomFragment)
         }
 
+        view.findViewById<Button>(R.id.yesBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_question9Fragment_to_howAboutThisFragment)
+        }
+
+        view.findViewById<Button>(R.id.noBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_question9Fragment_to_howAboutThisFragment)
+        }
+
         return view
     }
 

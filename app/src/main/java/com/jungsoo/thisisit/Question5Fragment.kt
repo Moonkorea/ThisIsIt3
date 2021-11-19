@@ -26,22 +26,26 @@ class Question5Fragment : Fragment() {
             it.findNavController().navigate(R.id.action_question5Fragment_to_randomFragment)
         }
 
-        view.findViewById<Button>(R.id.koreaBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
+        view.findViewById<Button>(R.id.koreaCB).setOnClickListener {
+
         }
 
-        view.findViewById<Button>(R.id.chinaBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
+        view.findViewById<Button>(R.id.chinaCB).setOnClickListener {
+
         }
 
-        view.findViewById<Button>(R.id.japanBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
+        view.findViewById<Button>(R.id.japanCB).setOnClickListener {
+
         }
 
-        view.findViewById<Button>(R.id.westBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
+        view.findViewById<Button>(R.id.westCB).setOnClickListener {
+
+
         }
 
+        view.findViewById<Button>(R.id.nextBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
+        }
 
         return view
     }
