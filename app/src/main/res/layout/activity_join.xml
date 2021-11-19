@@ -7,19 +7,358 @@
     tools:context=".JoinActivity">
 
     <TextView
+        android:text="회원가입"
+        android:textSize="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입 화면"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/editId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/joinCompleteBtn"
-        android:text="회원가입 완료"
+    <EditText
+        android:id="@+id/editPw"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editId" />
+
+    <EditText
+        android:id="@+id/editPwRe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPw" />
+
+    <TextView
+        android:text="* 나이"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPwRe"/>
+
+    <TextView
+        android:text="* 성별"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPwRe"/>
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="5"
+        android:hint="나이"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+
+    <CheckBox
+        android:id="@+id/editMan"
+        android:text="남자"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+
+    <CheckBox
+        android:id="@+id/editWoman"
+        android:text="여자"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+
+    <TextView
+        android:id="@+id/allergyText"
+        android:text="* 알레르기 정보 기입(해당사항 체크)"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintTop_toBottomOf="@id/editAge"/>
+
+    <CheckBox
+        android:id="@+id/allergy1"
+        android:text="우유"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy2"
+        android:text="소"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy1"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy3"
+        android:text="땅콩"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy2"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy4"
+        android:text="대두"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy3"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy5"
+        android:text="밀"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy6"
+        android:text="돼지"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy7"
+        android:text="닭"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy6"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy8"
+        android:text="조개"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="@+id/allergy7"
+        app:layout_constraintRight_toRightOf="@+id/allergy9"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy9"
+        android:text="오징어"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy8"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy10"
+        android:text="게"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy11"
+        android:text="새우"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy12"
+        android:text="깨"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy11"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy13"
+        android:text="고등어"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy12"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy14"
+        android:text="복숭아"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy13"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy15"
+        android:text="토마토"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy16"
+        android:text="호두"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy17"
+        android:text="잣"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy16"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy18"
+        android:text="키위"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy17"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy19"
+        android:text="굴"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy18"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy20"
+        android:text="전복"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy21"
+        android:text="홍합"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <CheckBox
+        android:id="@+id/allergy22"
+        android:text="메밀"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintLeft_toRightOf="@+id/allergy21"
+        app:layout_constraintTop_toBottomOf="@id/allergyText"/>
+
+    <EditText
+        android:id="@+id/allergy23"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="4dp"
+        android:ems="11"
+        android:hint="기타"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toRightOf="+id/allergy22"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyText" />
+
+    <Button
+        android:id="@id/btnRegister"
+        android:text="회원가입완료"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

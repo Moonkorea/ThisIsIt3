@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "294250051840",
+    "project_id": "thisisit-f9a14",
+    "storage_bucket": "thisisit-f9a14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294250051840:android:30eb5c6f37bbcf6e281be5",
+        "android_client_info": {
+          "package_name": "com.jungsoo.thisisit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294250051840-lj8tcd9n068ss7ip119lbcbvesr9frlf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsDy_teVeFf-9I6JdA_U39A9-0F3oOFwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294250051840-lj8tcd9n068ss7ip119lbcbvesr9frlf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
