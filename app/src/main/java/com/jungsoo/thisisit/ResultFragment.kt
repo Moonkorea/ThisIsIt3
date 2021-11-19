@@ -11,13 +11,25 @@ import android.widget.Button
 import androidx.navigation.findNavController
 
 class ResultFragment : Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_result, container, false)
+
+        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_resultFragment_to_categoryFragment)
+        }
+
+        view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_resultFragment_to_randomFragment)
+        }
 
         val shareBtn = view.findViewById<Button>(R.id.shareBtn)
 
@@ -34,16 +46,8 @@ class ResultFragment : Fragment() {
             startActivity(Intent.createChooser(Sharing_intent, "앱을 선택해 주세요"))
         }
 
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_resultFragment_to_categoryFragment)
-        }
-
-        view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_resultFragment_to_randomFragment)
-        }
 
         return view
     }
-
 
 }

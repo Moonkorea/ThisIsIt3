@@ -8,10 +8,38 @@
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/questionBtn"
+            android:text="질문"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/categoryBtn"
+            android:text="카테고리"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/randomBtn"
+            android:text="랜덤"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="최종 결과 화면"
+        android:text="오늘은 이거다!!"
         android:textSize="30sp"/>
 
     <Button
@@ -19,6 +47,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/shareBtn"
         android:text="공유하기"/>
+
 
 
 </LinearLayout>
