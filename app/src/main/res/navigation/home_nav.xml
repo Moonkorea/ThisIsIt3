@@ -31,6 +31,158 @@
         <action
             android:id="@+id/action_categoryFragment_to_randomFragment"
             app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailAlcoholFragment"
+            app:destination="@id/categoryDetailAlcoholFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailAsiaFragment"
+            app:destination="@id/categoryDetailAsiaFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailChinaFragment"
+            app:destination="@id/categoryDetailChinaFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailDessertFragment"
+            app:destination="@id/categoryDetailDessertFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailJapanFragment"
+            app:destination="@id/categoryDetailJapanFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailKoreaFragment"
+            app:destination="@id/categoryDetailKoreaFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailTotalFragment"
+            app:destination="@id/categoryDetailTotalFragment"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailWestFragment"
+            app:destination="@id/categoryDetailWestFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailAlcoholFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailAlcoholFragment"
+        android:label="fragment_category_detail_alcohol"
+        tools:layout="@layout/fragment_category_detail_alcohol">
+        <action
+            android:id="@+id/action_categoryDetailAlcoholFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailAlcoholFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailAlcoholFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailAsiaFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailAsiaFragment"
+        android:label="fragment_category_detail_asia"
+        tools:layout="@layout/fragment_category_detail_asia">
+        <action
+            android:id="@+id/action_categoryDetailAsiaFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailAsiaFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailAsiaFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailChinaFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailChinaFragment"
+        android:label="fragment_category_detail_china"
+        tools:layout="@layout/fragment_category_detail_china">
+        <action
+            android:id="@+id/action_categoryDetailChinaFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailChinaFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailChinaFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailDessertFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailDessertFragment"
+        android:label="fragment_category_detail_dessert"
+        tools:layout="@layout/fragment_category_detail_dessert">
+        <action
+            android:id="@+id/action_categoryDetailDessertFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailDessertFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailDessertFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailJapanFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailJapanFragment"
+        android:label="fragment_category_detail_japan"
+        tools:layout="@layout/fragment_category_detail_japan">
+        <action
+            android:id="@+id/action_categoryDetailJapanFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailJapanFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailJapanFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailKoreaFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailKoreaFragment"
+        android:label="fragment_category_detail_korea"
+        tools:layout="@layout/fragment_category_detail_korea">
+        <action
+            android:id="@+id/action_categoryDetailKoreaFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailKoreaFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailKoreaFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailTotalFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailTotalFragment"
+        android:label="fragment_category_detail_total"
+        tools:layout="@layout/fragment_category_detail_total">
+        <action
+            android:id="@+id/action_categoryDetailTotalFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailTotalFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailTotalFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailWestFragment"
+        android:name="com.jungsoo.thisisit.CategoryDetailWestFragment"
+        android:label="fragment_category_detail_west"
+        tools:layout="@layout/fragment_category_detail_west">
+        <action
+            android:id="@+id/action_categoryDetailWestFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_categoryDetailWestFragment_to_randomFragment"
+            app:destination="@id/randomFragment"/>
+        <action
+            android:id="@+id/action_categoryDetailWestFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"/>
     </fragment>
     <fragment
         android:id="@+id/randomFragment"

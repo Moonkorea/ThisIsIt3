@@ -32,16 +32,84 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
 
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="150dp">
+
+        <Button
+            android:id="@+id/totalBtn"
+            android:text="전체"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/koreaBtn"
+            android:text="한식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/japanBtn"
+            android:text="일식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="카테고리"
-        android:textSize="30sp"/>
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp">
 
+        <Button
+            android:id="@+id/chinaBtn"
+            android:text="중식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
 
+        <Button
+            android:id="@+id/westBtn"
+            android:text="양식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/asiaBtn"
+            android:text="아시아식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/alcoholBtn"
+            android:text="술과 안주"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/dessertBtn"
+            android:text="디저트"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
 
 </LinearLayout>
