@@ -43,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editId" />
 
+
     <EditText
         android:id="@+id/editPwRe"
         android:layout_width="wrap_content"
@@ -334,29 +335,16 @@
         app:layout_constraintLeft_toRightOf="@+id/allergy21"
         app:layout_constraintTop_toBottomOf="@id/allergyText"/>
 
-    <EditText
-        android:id="@+id/allergy23"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginRight="4dp"
-        android:ems="11"
-        android:hint="기타"
-        android:inputType="textPersonName"
-        app:layout_constraintLeft_toRightOf="+id/allergy22"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/allergyText" />
 
     <Button
         android:id="@id/btnRegister"
-        android:text="회원가입완료"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="36dp"
+        android:text="회원가입완료"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
