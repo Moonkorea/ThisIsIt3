@@ -10,13 +10,13 @@ class RandomResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random_result)
 
-        val resultAcceptBtn = findViewById<Button>(R.id.resultAcceptBtn)
+        /*val resultAcceptBtn = findViewById<Button>(R.id.resultAcceptBtn)
         resultAcceptBtn.setOnClickListener {
             val intent = Intent(this, FinalResultActivity::class.java)
             startActivity(intent)
         }
 
-        val retryBtn = findViewById<Button>(R.id.retryBtn)
+        val retryBtn = findViewById<Button>(R.id.retryBtn)*/
 
     }
 }
