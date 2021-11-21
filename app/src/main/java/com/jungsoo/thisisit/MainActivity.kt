@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        // 비회원으로 시작
+        // 비회원으로 시작 이 부분은 익명 로그인할까 말까 하다가 그냥 안햇음
         val btnNoLogin = findViewById<Button>(R.id.btnNoLogin)
         btnNoLogin.setOnClickListener {
 
@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
+            // 이 부분은 저 메세지가 안 뜨더라 입력안해도 ㅠ 일단은 안 지우고 냅둠
             if(id.text.toString().isEmpty() || password.text.toString().isEmpty()){
                 Toast.makeText(this, "아이디 또는 패스워드를 입력해주세요.", Toast.LENGTH_LONG)
             }
