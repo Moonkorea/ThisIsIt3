@@ -8,8 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ThisIsIt">
-        <activity android:name=".FinalResultActivity"></activity>
+        android:theme="@style/Theme.ThisIsIt"
+        >
+        <activity
+            android:name=".RandomHowAboutThisActivity"
+            android:exported="false" />
+        <activity android:name=".FinalResultActivity" />
         <activity android:name=".RandomResultActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".JoinActivity" />

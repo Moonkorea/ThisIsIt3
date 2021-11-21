@@ -1,5 +1,10 @@
 package com.jungsoo.thisisit
+
+import android.app.Application
+
 // 알레르기 정보는 리스트 순서대로 1우유, 2소, 3계란, 4대두, 5밀, 6돼지, 7닭, 8조개, 9오징어, 10게, 11새우, 12깨, 13생선, 14복숭아, 15토마토, 16호두, 17잣, 18땅콩, 19굴, 20전복, 21홍합, 22메밀
+
+
 @Food.Parcelize
 data class Food(val name: String, val taste: List<String>, val classify: String, val allergy: List<Int>) {
     annotation class Parcelize

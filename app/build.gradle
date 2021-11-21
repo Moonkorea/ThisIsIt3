@@ -35,6 +35,10 @@ android {
     androidExtensions{
         experimental = true
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 apply plugin: 'com.google.gms.google-services'
 
