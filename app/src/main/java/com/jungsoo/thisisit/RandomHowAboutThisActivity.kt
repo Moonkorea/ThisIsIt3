@@ -19,7 +19,7 @@ class RandomHowAboutThisActivity : AppCompatActivity() {
 
         val foodImage =binding.foodImage
 
-        binding.randomSelectBtn.setOnClickListener {
+/*        binding.randomSelectBtn.setOnClickListener {
 
             Toast.makeText(this, "성공", Toast.LENGTH_LONG).show()
 
@@ -37,5 +37,8 @@ class RandomHowAboutThisActivity : AppCompatActivity() {
                 foodImage.setImageResource(R.drawable.food3)
             }
         }
+         */
     }
+
+
 }
