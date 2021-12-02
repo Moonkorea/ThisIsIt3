@@ -29,7 +29,7 @@ class JoinActivity : AppCompatActivity() {
         database = Firebase.database.reference
 
         val database = Firebase.database
-        val myRef = database.getReference("UserData").child(Firebase.auth.currentUser!!.uid)
+       // val myRef = database.getReference("UserData").child(Firebase.auth.currentUser!!.uid)
 
         val joinBtn = findViewById<Button>(R.id.btnRegister)
 

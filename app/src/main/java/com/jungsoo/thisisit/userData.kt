@@ -7,3 +7,4 @@ data class userData(
     val sex : String,
     val allergy : List<Int>
 )
+
