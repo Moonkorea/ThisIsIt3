@@ -1,14 +1,16 @@
 package com.jungsoo.thisisit
 
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import org.json.JSONArray
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +29,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+        val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+        val jsonString = assets.open("fooddata.json").reader().readText()
+        val jsonArray = JSONArray(jsonString)
+        val foodarray = arrayOfNulls<String>(jsonArray.length())// 알레르기정보를 제외한 음식 정보 배열로 저장, 제외된 음식자리는 NULL로 대체
+        for(index in 0 until jsonArray.length()){
+            val jsonObject = jsonArray.getJSONObject(index)
+            val allergy = jsonObject.getJSONArray("allergy")
+            var j = 0
+            for (i in 0 until 21) {
+                if((allergy[i] == userallergy[i])&&(allergy[i]==1)){
+                    j += 1
+                }
+            }
+            if(j==0){
+                foodarray[index] = jsonObject.toString()
+            }
+        }
+        Log.d("foodarray", Arrays.toString(foodarray))
 
         // 회원가입
         val btnJoin = findViewById<Button>(R.id.btnRegister)

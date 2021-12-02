@@ -3,21 +3,21 @@ package com.jungsoo.thisisit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
-import com.jungsoo.thisisit.databinding.ActivityRandomHowAboutThisBinding
+//import androidx.databinding.DataBindingUtil
+//import com.jungsoo.thisisit.databinding.ActivityRandomHowAboutThisBinding
 import kotlin.random.Random
 
 class RandomHowAboutThisActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRandomHowAboutThisBinding
+   // private lateinit var binding: ActivityRandomHowAboutThisBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random_how_about_this)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_random_how_about_this)
+       // binding = DataBindingUtil.setContentView(this, R.layout.activity_random_how_about_this)
 
-        val foodImage =binding.foodImage
+       // val foodImage =binding.foodImage
 
 /*        binding.randomSelectBtn.setOnClickListener {
 
