@@ -7,3 +7,4 @@ data class UserProfile(
     val sex: ArrayList<String>? = null,
     val allergy: ArrayList<Int>? = null
 )
+
