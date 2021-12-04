@@ -44,11 +44,6 @@ class JoinActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = Firebase.database.reference
 
-        @IgnoreExtraProperties
-        data class User(val email: String? = null, val age: String? = null) {
-            // Null default values create a no-argument default constructor, which is needed
-            // for deserialization from a DataSnapshot.
-        }
 
         fun writeNewUser(userId: String, email: String, age: String, sex: ArrayList<String>, allergy: ArrayList<Int>) {
             val user = UserProfile(email, age, sex, allergy)
