@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.ListView
+import android.widget.*
 import androidx.navigation.findNavController
 
 
@@ -38,10 +35,10 @@ class CategoryDetailDessertFragment : Fragment() {
             it.findNavController().navigate(R.id.action_categoryDetailDessertFragment_to_categoryFragment)
         }
 
+        val searchView = view.findViewById<SearchView>(R.id.searchView)
+
         val adapter = activity?.let { ArrayAdapter(it, android.R.layout.simple_list_item_1, foodlist) }
-
         val listview = view.findViewById(R.id.foodListTotal) as ListView
-
 
         listview.adapter = adapter
 
@@ -54,6 +51,25 @@ class CategoryDetailDessertFragment : Fragment() {
                 // TODO : use strText
             }
         }
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (foodlist.contains(query)) {
+                    if (adapter != null) {
+                        adapter.filter.filter(query)
+                    }
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (adapter != null) {
+                    adapter.filter.filter(newText)
+                }
+                return false
+            }
+
+        })
 
         return view
     }
