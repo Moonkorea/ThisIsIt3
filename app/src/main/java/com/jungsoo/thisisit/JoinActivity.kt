@@ -13,12 +13,12 @@ import com.google.firebase.database.IgnoreExtraProperties
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_join.*
+import org.json.JSONArray
 
 class JoinActivity : AppCompatActivity() {
 
     var auth: FirebaseAuth? = null
     private lateinit var db: DatabaseReference
-
 
     // 이메일 양식 확인 함수
     fun isValidEamil(email: String): Boolean {
@@ -40,6 +40,9 @@ class JoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
+
+
+
 
         auth = FirebaseAuth.getInstance()
         db = Firebase.database.reference

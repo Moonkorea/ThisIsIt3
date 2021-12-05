@@ -12,6 +12,7 @@ import android.widget.Button
 import androidx.navigation.ActivityNavigator
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import org.json.JSONArray
 import java.util.Random
 
 class RandomFragment : Fragment() {
@@ -20,6 +21,7 @@ class RandomFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
 
     }

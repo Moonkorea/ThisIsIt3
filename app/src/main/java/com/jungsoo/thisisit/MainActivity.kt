@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
-        val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        /*val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
         val jsonString = assets.open("fooddata.json").reader().readText()
         val jsonArray = JSONArray(jsonString)
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 foodarray[index] = jsonObject.toString()
             }
         }
-        Log.d("foodarray", Arrays.toString(foodarray))
+        Log.d("foodarray", Arrays.toString(foodarray))*/
 
         // 회원가입
         val btnJoin = findViewById<Button>(R.id.btnRegister)

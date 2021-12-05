@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:text="6. 3가지 맛 중 원하시는 맛은?\n(중복 가능)"
+            android:text="6. 면류는 땡기시나요?"
             android:textSize="30sp"/>
 
 
@@ -62,33 +62,20 @@
         android:paddingTop="10dp"
         android:padding="20dp">
 
-        <CheckBox
-            android:id="@+id/hotCB"
-            android:text="매운맛"
+        <Button
+            android:id="@+id/yesBtn"
+            android:text="네"
             android:layout_width="200dp"
             android:layout_height="60dp"/>
 
-
-        <CheckBox
-            android:id="@+id/saltyCB"
-            android:text="짠맛"
-            android:layout_width="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="60dp"/>
-
-        <CheckBox
-            android:id="@+id/sweetCB"
-            android:text="단맛"
-            android:layout_width="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="60dp"/>
 
         <Button
-            android:id="@+id/nextBtn"
-            android:text="다음"
+            android:id="@+id/noBtn"
+            android:text="아니요"
             android:layout_width="200dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_height="60dp"/>
+
 
     </LinearLayout>
 

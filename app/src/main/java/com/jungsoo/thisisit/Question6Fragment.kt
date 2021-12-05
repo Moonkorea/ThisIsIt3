@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.findNavController
 
 
@@ -28,28 +30,38 @@ class Question6Fragment : Fragment() {
             it.findNavController().navigate(R.id.action_question6Fragment_to_randomFragment)
         }
 
-        view.findViewById<Button>(R.id.hotCB).setOnClickListener {
-
-
-        }
-
-        view.findViewById<Button>(R.id.saltyCB).setOnClickListener {
-
+        /*view.findViewById<Button>(R.id.yesBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_question6Fragment_to_howAboutThisFragment)
 
         }
 
-        view.findViewById<Button>(R.id.sweetCB).setOnClickListener {
+        view.findViewById<Button>(R.id.noBtn).setOnClickListener {
+            it.findNavController().navigate(R.id.action_question6Fragment_to_howAboutThisFragment)
 
-
-        }
-
-        view.findViewById<Button>(R.id.nextBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question6Fragment_to_question7Fragment)
-        }
+        }*/
 
 
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.yesBtn).setOnClickListener {
+
+            val bundle = bundleOf("senderkey6.1" to 17)
+            setFragmentResult("Question6.1", bundle)
+            it.findNavController().navigate(R.id.action_question6Fragment_to_howAboutThisFragment)
+        }
+
+        view.findViewById<Button>(R.id.noBtn).setOnClickListener {
+
+            val bundle = bundleOf("senderkey6.2" to 18)
+            setFragmentResult("Question6.2", bundle)
+            it.findNavController().navigate(R.id.action_question6Fragment_to_howAboutThisFragment)
+        }
+
+
+    }
 
 }
