@@ -8,6 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import org.json.JSONArray
 import java.util.*
 
@@ -15,12 +18,14 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private var auth: FirebaseAuth? = null
+    private lateinit var db: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         auth = FirebaseAuth.getInstance()
+        db = FirebaseDatabase.getInstance().getReference().child("users")
 
         // 비회원으로 시작 이 부분은 익명 로그인할까 말까 하다가 그냥 안햇음
         val btnNoLogin = findViewById<Button>(R.id.btnNoLogin)
@@ -66,8 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            // 이 부분은 저 메세지가 안 뜨더라 입력안해도 ㅠ 일단은 안 지우고 냅둠
-            if(id.text.toString().isEmpty() || password.text.toString().isEmpty()){
+            if(id.length() == 0  || password.length() == 0){
                 Toast.makeText(this, "아이디 또는 패스워드를 입력해주세요.", Toast.LENGTH_LONG)
             }
             else{
@@ -75,7 +79,11 @@ class MainActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if(task.isSuccessful) {
                             Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG)
+                            val user = auth!!.currentUser
                             val intent = Intent(this, HomeActivity::class.java)
+                            if (user != null) {
+                                intent.putExtra("uid", user.uid)
+                            }
                             startActivity(intent)
                         }
                         else {
