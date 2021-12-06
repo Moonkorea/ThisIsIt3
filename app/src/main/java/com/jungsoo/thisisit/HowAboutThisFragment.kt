@@ -1,5 +1,6 @@
 package com.jungsoo.thisisit
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -33,7 +34,7 @@ class HowAboutThisFragment : Fragment() {
             it.findNavController().navigate(R.id.action_howAboutThisFragment_to_randomFragment)
         }
 
-        /*view.findViewById<Button>(R.id.chooseBtn).setOnClickListener {
+        /*view.findViewById<Button>(R.id.goBtn).setOnClickListener {
             it.findNavController().navigate(R.id.action_howAboutThisFragment_to_resultFragment)
         }*/
 
@@ -77,7 +78,15 @@ class HowAboutThisFragment : Fragment() {
                                                     bundle.getInt("senderKey6.1").let { value ->
                                                         var value1 = value
 
-                                                        val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+                                                        val goBtn = view.findViewById<Button>(R.id.goBtn)
+                                                        goBtn.setOnClickListener {
+                                                            val intent = Intent(context, HowAboutThisActivity::class.java)
+                                                            intent.putExtra("111111", 111111)
+                                                            startActivity(intent)
+
+                                                        }
+
+                                                        /*val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
                                                         for(index in 0 until jsonArray.length()){
                                                             val jsonObject = jsonArray.getJSONObject(index)
                                                             val allergy = jsonObject.getJSONArray("allergy")
@@ -91,7 +100,7 @@ class HowAboutThisFragment : Fragment() {
                                                                 foodarray[index] = jsonObject.toString()
                                                             }
                                                         }
-                                                        Log.d("foodarray", Arrays.toString(foodarray))
+                                                        Log.d("foodarray", Arrays.toString(foodarray))*/
 
                                                     }
 
