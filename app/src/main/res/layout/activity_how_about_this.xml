@@ -42,14 +42,27 @@
         android:paddingTop="10dp"
         android:padding="20dp">
 
+        <TextView
+            android:id="@+id/howAboutThis"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="조건에 맞는 음식이 없습니다."
+            android:textSize="30sp"
+            android:layout_width="300dp"
+            android:layout_height="100dp"/>
+
+
         <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:id="@+id/chooseBtn"
-            android:text="추천 메뉴 결과(선택)"
+            android:text="추천 메뉴 선택"
             android:layout_width="200dp"
-            android:layout_height="150dp"/>
+            android:layout_height="60dp"/>
 
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/anotherBtn"
             android:text="다른거요"
             android:layout_width="200dp"
