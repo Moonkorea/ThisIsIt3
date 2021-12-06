@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_infoDeveloper"
+            android:title="개발자정보"
+            android:icon="@android:drawable/ic_menu_info_details"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/action_infoUser"
+            android:title="마이페이지"
+            android:icon="@android:drawable/ic_menu_more"
+            app:showAsAction="ifRoom" />
+</menu>
