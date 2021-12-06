@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         }
         Log.d("foodarray", Arrays.toString(foodarray))*/
 
+
+
+
         // 회원가입
         val btnJoin = findViewById<Button>(R.id.btnRegister)
         btnJoin.setOnClickListener {
