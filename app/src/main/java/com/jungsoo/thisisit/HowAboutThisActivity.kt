@@ -24,7 +24,7 @@ class HowAboutThisActivity : AppCompatActivity() {
 
         val userallergy = arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-        val userAnswer = arrayOf(0, 0, 0, 0, 0, 0)
+        var userAnswer = arrayOf(0, 0, 0, 0, 0, 0)
 
         /*if (test == 111111) {
             val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -46,7 +46,7 @@ class HowAboutThisActivity : AppCompatActivity() {
         Log.d("foodallergyarray", Arrays.toString(foodarray))*/
 
         if (test == 111111) {
-            val userAnswer = arrayOf(1, 1, 1, 1, 1, 1)
+            userAnswer = arrayOf(1, 1, 1, 1, 1, 1)
             Log.d("useranswer", Arrays.toString(userAnswer))
 
         }
