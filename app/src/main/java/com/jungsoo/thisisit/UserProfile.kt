@@ -7,4 +7,5 @@ data class UserProfile(
     val age: String? = null,
     val sex: ArrayList<String>? = null,
     val allergy: ArrayList<Int>? = null
+    // val point: ArrayList<Int> = [0, 0, ...... 0] : length of point array = Total foods
 ) : Serializable

@@ -4,112 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CategoryFragment"
+    android:id="@+id/categoryF"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-
-        <Button
-            android:id="@+id/questionBtn"
-            android:text="질문"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:id="@+id/categoryBtn"
-            android:text="카테고리"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:id="@+id/randomBtn"
-            android:text="랜덤"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:layout_marginTop="150dp">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/totalBtn"
             android:text="전체"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_total"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/koreaBtn"
             android:text="한식"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_korea"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-        <Button
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp">
+
+        <android.widget.Button
             android:id="@+id/japanBtn"
             android:text="일식"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_japan"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp">
-
-        <Button
+        <android.widget.Button
             android:id="@+id/chinaBtn"
             android:text="중식"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_china"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/westBtn"
             android:text="양식"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_west"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-        <Button
-            android:id="@+id/asiaBtn"
-            android:text="아시아식"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:layout_marginTop="50dp">
 
-        <Button
+        <android.widget.Button
+            android:id="@+id/asiaBtn"
+            android:text="아시아식"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_asia"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
+
+        <android.widget.Button
             android:id="@+id/alcoholBtn"
             android:text="술과 안주"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_alcohol"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/dessertBtn"
             android:text="디저트"
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/resize_dessert"
+            android:paddingTop="10dp"
+            android:background="@drawable/round_box_white"/>
     </LinearLayout>
 
 </LinearLayout>

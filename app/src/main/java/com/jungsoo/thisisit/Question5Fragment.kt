@@ -18,30 +18,8 @@ class Question5Fragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view = inflater.inflate(R.layout.fragment_question5, container, false)
+        return inflater.inflate(R.layout.fragment_question5, container, false)
 
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_categoryFragment)
-        }
-
-        view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_randomFragment)
-        }
-
-        /*view.findViewById<Button>(R.id.HSBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
-        }
-
-        view.findViewById<Button>(R.id.SSBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
-        }
-
-        view.findViewById<Button>(R.id.otherBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question5Fragment_to_question6Fragment)
-        }*/
-
-
-        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

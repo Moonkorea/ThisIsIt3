@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThisIsIt">
         <activity
+            android:name=".RandomHomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_random_home"
+            android:theme="@style/Theme.ThisIsIt.NoActionBar" />
+        <activity
+            android:name=".QuestionHomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_question_home"
+            android:theme="@style/Theme.ThisIsIt.NoActionBar" />
+        <activity
+            android:name=".CategoryHomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_category_home"
+            android:theme="@style/Theme.ThisIsIt.NoActionBar" />
+        <activity
             android:name=".FinalResultActivity"
             android:exported="false" />
         <activity
@@ -18,7 +33,6 @@
         <activity
             android:name=".RandomHowAboutThisActivity"
             android:exported="false" />
-        <activity android:name=".RandomResultActivity" />
         <activity android:name=".MypageActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".JoinActivity" />

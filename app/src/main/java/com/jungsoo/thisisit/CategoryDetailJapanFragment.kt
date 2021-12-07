@@ -24,18 +24,6 @@ class CategoryDetailJapanFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_category_detail_japan, container, false)
 
-        view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_categoryDetailJapanFragment_to_randomFragment)
-        }
-
-        view.findViewById<Button>(R.id.questionBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_categoryDetailJapanFragment_to_questionFragment)
-        }
-
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_categoryDetailJapanFragment_to_categoryFragment)
-        }
-
         val searchView = view.findViewById<SearchView>(R.id.searchView)
 
         val adapter = activity?.let { ArrayAdapter(it, android.R.layout.simple_list_item_1, foodlist) }

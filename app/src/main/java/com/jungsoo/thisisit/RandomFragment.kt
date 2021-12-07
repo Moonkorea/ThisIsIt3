@@ -17,39 +17,13 @@ import java.util.Random
 
 class RandomFragment : Fragment() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-
-        val view = inflater.inflate(R.layout.fragment_random, container, false)
-
-
-
-        view.findViewById<Button>(R.id.questionBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_randomFragment_to_questionFragment)
-        }
-
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_randomFragment_to_categoryFragment)
-        }
-
-
-
-        return view
-
-
+        return inflater.inflate(R.layout.fragment_random, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -59,9 +33,8 @@ class RandomFragment : Fragment() {
 
         randomSelectBtn?.setOnClickListener {
 
-            val intent = Intent(context, RandomHowAboutThisActivity::class.java)
+            val intent = Intent(context, RandomHomeActivity::class.java)
             startActivity(intent)
-
         }
     }
 

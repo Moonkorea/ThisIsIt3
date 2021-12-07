@@ -16,34 +16,11 @@ class Question2Fragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        return inflater.inflate(R.layout.fragment_question2, container, false)
 
-        val view = inflater.inflate(R.layout.fragment_question2, container, false)
-
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question2Fragment_to_categoryFragment)
-        }
-
-        view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question2Fragment_to_randomFragment)
-        }
-
-        /*view.findViewById<Button>(R.id.yesBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question2Fragment_to_question3Fragment)
-        }
-
-        view.findViewById<Button>(R.id.noBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_question2Fragment_to_question3Fragment)
-        }*/
-
-        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

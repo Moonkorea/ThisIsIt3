@@ -3,210 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav"
-    app:startDestination="@id/questionFragment">
+    app:startDestination="@id/questionFragment1">
 
     <fragment
-        android:id="@+id/questionFragment"
-        android:name="com.jungsoo.thisisit.QuestionFragment"
+        android:id="@+id/questionFragment1"
+        android:name="com.jungsoo.thisisit.Question1Fragment"
         android:label="fragment_question"
-        tools:layout="@layout/fragment_question" >
+        tools:layout="@layout/fragment_question1" >
         <action
-            android:id="@+id/action_questionFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_questionFragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
-            android:id="@+id/action_questionFragment_to_question2Fragment"
+            android:id="@+id/action_question1Fragment_to_question2Fragment"
             app:destination="@id/question2Fragment" />
     </fragment>
-    <fragment
-        android:id="@+id/categoryFragment"
-        android:name="com.jungsoo.thisisit.CategoryFragment"
-        android:label="fragment_category"
-        tools:layout="@layout/fragment_category" >
-        <action
-            android:id="@+id/action_categoryFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryFragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailAlcoholFragment"
-            app:destination="@id/categoryDetailAlcoholFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailAsiaFragment"
-            app:destination="@id/categoryDetailAsiaFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailChinaFragment"
-            app:destination="@id/categoryDetailChinaFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailDessertFragment"
-            app:destination="@id/categoryDetailDessertFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailJapanFragment"
-            app:destination="@id/categoryDetailJapanFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailKoreaFragment"
-            app:destination="@id/categoryDetailKoreaFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailTotalFragment"
-            app:destination="@id/categoryDetailTotalFragment"/>
-        <action
-            android:id="@+id/action_categoryFragment_to_categoryDetailWestFragment"
-            app:destination="@id/categoryDetailWestFragment"/>
-    </fragment>
 
-    <fragment
-        android:id="@+id/categoryDetailAlcoholFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailAlcoholFragment"
-        android:label="fragment_category_detail_alcohol"
-        tools:layout="@layout/fragment_category_detail_alcohol">
-        <action
-            android:id="@+id/action_categoryDetailAlcoholFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailAlcoholFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailAlcoholFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailAsiaFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailAsiaFragment"
-        android:label="fragment_category_detail_asia"
-        tools:layout="@layout/fragment_category_detail_asia">
-        <action
-            android:id="@+id/action_categoryDetailAsiaFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailAsiaFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailAsiaFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailChinaFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailChinaFragment"
-        android:label="fragment_category_detail_china"
-        tools:layout="@layout/fragment_category_detail_china">
-        <action
-            android:id="@+id/action_categoryDetailChinaFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailChinaFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailChinaFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailDessertFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailDessertFragment"
-        android:label="fragment_category_detail_dessert"
-        tools:layout="@layout/fragment_category_detail_dessert">
-        <action
-            android:id="@+id/action_categoryDetailDessertFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailDessertFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailDessertFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailJapanFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailJapanFragment"
-        android:label="fragment_category_detail_japan"
-        tools:layout="@layout/fragment_category_detail_japan">
-        <action
-            android:id="@+id/action_categoryDetailJapanFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailJapanFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailJapanFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailKoreaFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailKoreaFragment"
-        android:label="fragment_category_detail_korea"
-        tools:layout="@layout/fragment_category_detail_korea">
-        <action
-            android:id="@+id/action_categoryDetailKoreaFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailKoreaFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailKoreaFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailTotalFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailTotalFragment"
-        android:label="fragment_category_detail_total"
-        tools:layout="@layout/fragment_category_detail_total">
-        <action
-            android:id="@+id/action_categoryDetailTotalFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailTotalFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailTotalFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDetailWestFragment"
-        android:name="com.jungsoo.thisisit.CategoryDetailWestFragment"
-        android:label="fragment_category_detail_west"
-        tools:layout="@layout/fragment_category_detail_west">
-        <action
-            android:id="@+id/action_categoryDetailWestFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_categoryDetailWestFragment_to_randomFragment"
-            app:destination="@id/randomFragment"/>
-        <action
-            android:id="@+id/action_categoryDetailWestFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment"/>
-    </fragment>
     <fragment
         android:id="@+id/randomFragment"
         android:name="com.jungsoo.thisisit.RandomFragment"
         android:label="fragment_random"
         tools:layout="@layout/fragment_random" >
         <action
-            android:id="@+id/action_randomFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_randomFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
+            android:id="@+id/action_randomFragment_to_question1Fragment"
+            app:destination="@id/questionFragment1" />
     </fragment>
     <fragment
         android:id="@+id/question2Fragment"
         android:name="com.jungsoo.thisisit.Question2Fragment"
         android:label="fragment_question2"
         tools:layout="@layout/fragment_question2" >
-        <action
-            android:id="@+id/action_question2Fragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_question2Fragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
         <action
             android:id="@+id/action_question2Fragment_to_question3Fragment"
             app:destination="@id/question3Fragment" />
@@ -217,12 +39,6 @@
         android:label="fragment_question3"
         tools:layout="@layout/fragment_question3" >
         <action
-            android:id="@+id/action_question3Fragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_question3Fragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
             android:id="@+id/action_question3Fragment_to_question4Fragment"
             app:destination="@id/question4Fragment" />
     </fragment>
@@ -231,12 +47,6 @@
         android:name="com.jungsoo.thisisit.Question4Fragment"
         android:label="fragment_question4"
         tools:layout="@layout/fragment_question4" >
-        <action
-            android:id="@+id/action_question4Fragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_question4Fragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
         <action
             android:id="@+id/action_question4Fragment_to_question5Fragment"
             app:destination="@id/question5Fragment" />
@@ -247,12 +57,6 @@
         android:label="fragment_question5"
         tools:layout="@layout/fragment_question5" >
         <action
-            android:id="@+id/action_question5Fragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
-            android:id="@+id/action_question5Fragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
             android:id="@+id/action_question5Fragment_to_question6Fragment"
             app:destination="@id/question6Fragment" />
     </fragment>
@@ -262,12 +66,6 @@
         android:label="fragment_question6"
         tools:layout="@layout/fragment_question6" >
         <action
-            android:id="@+id/action_question6Fragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_question6Fragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
             android:id="@+id/action_question6Fragment_to_howAboutThisFragment"
             app:destination="@id/howAboutThisFragment" />
     </fragment>
@@ -276,34 +74,16 @@
         android:name="com.jungsoo.thisisit.HowAboutThisFragment"
         android:label="fragment_how_about_this"
         tools:layout="@layout/fragment_how_about_this" >
-        <action
-            android:id="@+id/action_howAboutThisFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
-            android:id="@+id/action_howAboutThisFragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
-        <action
-            android:id="@+id/action_howAboutThisFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
-        <action
-            android:id="@+id/action_howAboutThisFragment_to_testFragment"
-            app:destination="@id/testFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.jungsoo.thisisit.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
-            android:id="@+id/action_resultFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
-        <action
             android:id="@+id/action_resultFragment_to_randomFragment"
             app:destination="@id/randomFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.jungsoo.thisisit.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+
 </navigation>

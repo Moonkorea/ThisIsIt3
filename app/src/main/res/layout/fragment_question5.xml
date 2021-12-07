@@ -7,35 +7,6 @@
     tools:context=".Question5Fragment"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-
-        <Button
-            android:id="@+id/questionBtn"
-            android:text="질문"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:id="@+id/categoryBtn"
-            android:text="카테고리"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:id="@+id/randomBtn"
-            android:text="랜덤"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -47,7 +18,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:text="5. 다음 맛 중 원하시는 맛은?"
-            android:textSize="25sp"/>
+            android:textSize="30sp"/>
 
 
     </LinearLayout>
@@ -66,24 +37,24 @@
             android:id="@+id/HSBtn"
             android:text="매운맛 + 짠맛"
             android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="60dp"/>
+            android:layout_width="400dp"
+            android:layout_height="100dp"/>
 
 
         <Button
             android:id="@+id/SSBtn"
             android:text="단맛 + 짠맛"
-            android:layout_width="200dp"
+            android:layout_width="400dp"
             android:layout_marginTop="20dp"
-            android:layout_height="60dp"
+            android:layout_height="100dp"
             android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/otherBtn"
             android:text="이외의 맛"
-            android:layout_width="200dp"
+            android:layout_width="400dp"
             android:layout_marginTop="20dp"
-            android:layout_height="60dp"/>
+            android:layout_height="100dp"/>
 
 
 

@@ -7,7 +7,7 @@ import android.widget.Toast
 import org.json.JSONArray
 import java.util.*
 //import androidx.databinding.DataBindingUtil
-//import com.jungsoo.thisisit.databinding.ActivityRandomHowAboutThisBinding
+import com.jungsoo.thisisit.databinding.ActivityRandomHowAboutThisBinding
 import kotlin.random.Random
 
 class RandomHowAboutThisActivity : AppCompatActivity() {

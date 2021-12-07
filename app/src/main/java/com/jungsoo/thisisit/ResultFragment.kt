@@ -23,9 +23,6 @@ class ResultFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_result, container, false)
 
-        view.findViewById<Button>(R.id.categoryBtn).setOnClickListener {
-            it.findNavController().navigate(R.id.action_resultFragment_to_categoryFragment)
-        }
 
         view.findViewById<Button>(R.id.randomBtn).setOnClickListener {
             it.findNavController().navigate(R.id.action_resultFragment_to_randomFragment)

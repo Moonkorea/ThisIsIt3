@@ -4,10 +4,28 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable-v24/ic_baseline_arrow_back_ios_24.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/btn_background.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/button_size.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_alcohol.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_asia.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_china.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_dessert.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_japan.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_korea.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_total.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/resize_west.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/drawable/round_box_white.xml" value="0.3875" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_category_home.xml" value="0.33" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_home.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_how_about_this.xml" value="0.182370820668693" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_join.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_main.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_mypage.xml" value="0.33" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_question_home.xml" value="0.33" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_random_home.xml" value="0.33" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_random_how_about_this.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/activity_splash.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_category.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_category_detail_alcohol.xml" value="0.37135416666666665" />
@@ -21,6 +39,7 @@
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_first.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_how_about_this.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_question.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_question1.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_question2.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_question3.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_question4.xml" value="0.37135416666666665" />
@@ -31,17 +50,8 @@
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/fragment_test.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/layout/layout.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/menu/menu.xml" value="0.37135416666666665" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/activity_final_result.xml" value="0.2" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/activity_how_about_this.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/activity_random_how_about_this.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_how_about_this.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question2.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question3.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question4.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question5.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_question6.xml" value="0.21693840579710144" />
-        <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit17/app/src/main/res/layout/fragment_result.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/sai05/Desktop/aStudio/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit6/app/src/main/res/layout/activity_join.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit6/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/wjdeo/AndroidStudioProjects/thisisit6/app/src/main/res/layout/activity_random_how_about_this.xml" value="0.2390625" />
