@@ -25,6 +25,12 @@ class HowAboutThisActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_how_about_this)
 
+        val homeBtn = findViewById<Button>(R.id.homeBtn)
+        homeBtn.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
         val jsonString = assets.open("fooddata.json").reader().readText()
         val jsonArray = JSONArray(jsonString)
         val foodAllergyArray = arrayOfNulls<String>(jsonArray.length())// 알레르기정보를 제외한 음식 정보 배열로 저장, 제외된 음식자리는 NULL로 대체
@@ -486,7 +492,6 @@ class HowAboutThisActivity : AppCompatActivity() {
                     answerArray1[424] = intent.getIntExtra("223622", 0)
                     answerArray1[425] = intent.getIntExtra("223631", 0)
                     answerArray1[426] = intent.getIntExtra("223632", 0)
-
                     answerArray1[427] = intent.getIntExtra("111221", 0)
                     answerArray1[428] = intent.getIntExtra("222612", 0)
                     answerArray1[429] = intent.getIntExtra("222621", 0)
@@ -607,30 +612,29 @@ class HowAboutThisActivity : AppCompatActivity() {
 
                     // 랜덤으로 음식 화면 출력하는 곳
                     val range = (0..finalFoodCnt - 1)
-                    var howAboutThis = findViewById<TextView>(R.id.howAboutThis) as TextView
-                    val anotherBtn = findViewById<Button>(R.id.anotherBtn)
+                    val howAboutThis = findViewById(R.id.howAboutThis) as TextView
+
 
                     if (finalFoodCnt == 0) {
-                        howAboutThis.setText("조건에 맞는 음식이 \n없습니다.")
-                    } else {
+                        howAboutThis.text = "조건에 맞는 음식이 \n없습니다."
+                    }
+                    else {
                         var randomNum = range.random()
-                        howAboutThis.setText(finalFoodArray[randomNum])
+                        howAboutThis.text = finalFoodArray[randomNum]
 
+                        val anotherBtn = findViewById<Button>(R.id.anotherBtn)
                         anotherBtn.setOnClickListener {
                             randomNum = range.random()
-                            howAboutThis.setText(finalFoodArray[randomNum])
+                            howAboutThis.text = finalFoodArray[randomNum]
                         }
 
                         val chooseBtn = findViewById<Button>(R.id.chooseBtn)
-
                         chooseBtn.setOnClickListener {
                             val intent = Intent(this, FinalResultActivity::class.java)
                             intent.putExtra("finalresult", finalFoodArray[randomNum])
                             startActivity(intent)
                         }
-
                     }
-
                 }
             }
         }

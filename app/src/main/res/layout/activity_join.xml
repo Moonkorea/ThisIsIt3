@@ -57,6 +57,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPw" />
 
+    <EditText
+        android:id="@+id/editNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="닉네임을 입력해주세요"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPwRe" />
+
+
     <TextView
         android:text="* 나이"
         android:textSize="18sp"
@@ -66,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPwRe"/>
+        app:layout_constraintTop_toBottomOf="@+id/editNickname"/>
 
     <TextView
         android:text="* 성별"
@@ -77,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPwRe"/>
+        app:layout_constraintTop_toBottomOf="@+id/editNickname"/>
 
     <EditText
         android:id="@+id/editAge"
@@ -90,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+        app:layout_constraintTop_toBottomOf="@id/editNickname"/>
 
     <CheckBox
         android:id="@+id/editMan"
@@ -101,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+        app:layout_constraintTop_toBottomOf="@id/editNickname"/>
 
     <CheckBox
         android:id="@+id/editWoman"
@@ -112,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editPwRe"/>
+        app:layout_constraintTop_toBottomOf="@id/editNickname"/>
 
     <TextView
         android:id="@+id/allergyText"
@@ -148,7 +162,7 @@
 
     <CheckBox
         android:id="@+id/allergy3"
-        android:text="땅콩"
+        android:text="계란"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginTop="1dp"
@@ -243,7 +257,7 @@
 
     <CheckBox
         android:id="@+id/allergy13"
-        android:text="고등어"
+        android:text="생선"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
@@ -290,7 +304,7 @@
 
     <CheckBox
         android:id="@+id/allergy18"
-        android:text="키위"
+        android:text="땅콩"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginTop="120dp"
@@ -338,9 +352,9 @@
 
     <Button
         android:id="@id/btnRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="10dp"
         android:text="회원가입완료"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

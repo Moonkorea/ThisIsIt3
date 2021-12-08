@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_home.homeViewpager
 
 class CategoryHomeActivity : AppCompatActivity() {
 
-    private val tabTextList = arrayListOf("전체", "한식", "일식", "중식", "양식", "아시아식", "술과 안주", "디저트류")
+    private val tabTextList = arrayListOf("전체", "한식", "일식", "중식", "양식", "아시아", "술좋아", "디저트")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

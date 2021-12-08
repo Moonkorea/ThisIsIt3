@@ -46,7 +46,6 @@
             android:id="@+id/howAboutThis"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:text="조건에 맞는 음식이 없습니다."
             android:textSize="30sp"
             android:layout_width="300dp"
             android:layout_height="100dp"/>
@@ -57,17 +56,24 @@
             android:layout_marginTop="20dp"
             android:id="@+id/chooseBtn"
             android:text="추천 메뉴 선택"
-            android:layout_width="200dp"
+            android:layout_width="400dp"
             android:layout_height="60dp"/>
-
 
         <Button
             android:layout_gravity="center"
             android:id="@+id/anotherBtn"
             android:text="다른거요"
-            android:layout_width="200dp"
+            android:layout_width="400dp"
             android:layout_marginTop="20dp"
             android:layout_height="60dp"/>
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="400dp"
+            android:layout_height="60dp"
+            android:text="홈화면"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
 
 
     </LinearLayout>

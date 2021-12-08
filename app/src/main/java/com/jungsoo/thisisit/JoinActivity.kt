@@ -38,37 +38,33 @@ class JoinActivity : AppCompatActivity() {
         return (password == passwordre)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
 
-
-
-
         auth = FirebaseAuth.getInstance()
         db = Firebase.database.reference
-
 
         fun writeNewUser(
             userId: String,
             email: String,
+            nickname: String,
             age: String,
             sex: ArrayList<String>,
             allergy: ArrayList<Int>
         ) {
-            val user = UserProfile(email, age, sex, allergy)
+            val user = UserProfile(email, nickname, age, sex, allergy)
 
             db.child("users").child(userId).setValue(user)
         }
 
         val joinBtn = findViewById<Button>(R.id.btnRegister)
-
         joinBtn.setOnClickListener {
 
             val email = findViewById<EditText>(R.id.editId)
             val password = findViewById<EditText>(R.id.editPw)
             val passwordre = findViewById<EditText>(R.id.editPwRe)
+            val nickname = findViewById<EditText>(R.id.editNickname)
             val age = findViewById<EditText>(R.id.editAge)
 
             // 성별
@@ -171,10 +167,6 @@ class JoinActivity : AppCompatActivity() {
             if (!allergy22.isChecked)
                 allergyArray.add(0)
 
-            Log.d("MAIN", "value" + email.text.toString())
-            Log.d("MAIN", "value" + age.text.toString())
-            Log.d("MAIN", "value" + sex)
-            Log.d("MAIN", "value" + allergyArray)
             // 이메일이 없는 경우
             if (email.length() == 0) {
                 Toast.makeText(baseContext, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -195,21 +187,21 @@ class JoinActivity : AppCompatActivity() {
             }
 
             // 비밀번호 확인이 틀린 경우
-            if (isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && !passwordCheck(
-                    password.text.toString(),
-                    passwordre.text.toString()
-                )
-            ) {
+            if (isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && !passwordCheck(password.text.toString(), passwordre.text.toString())) {
                 Toast.makeText(baseContext, "입력한 비밀번호가 일치하지않습니다.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
+            // 닉네임을 입력하지 않은 경우
+            if (isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && passwordCheck(password.text.toString(), passwordre.text.toString())
+                && nickname.length() == 0) {
+                Toast.makeText(baseContext, "사용할 닉네임을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             // 회원가입
-            if (isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && (passwordCheck(
-                    password.text.toString(),
-                    passwordre.text.toString()
-                ))
-            ) {
+            if ( isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && passwordCheck(password.text.toString(), passwordre.text.toString())
+                        && nickname.length() != 0 && age.length() != 0) {
                 auth!!.createUserWithEmailAndPassword(
                     email.text.toString(),
                     password.text.toString()
@@ -220,7 +212,7 @@ class JoinActivity : AppCompatActivity() {
 
                             writeNewUser(
                                 auth?.uid.toString(),
-                                email.text.toString(), age.text.toString(), sex, allergyArray
+                                email.text.toString(), nickname.text.toString(), age.text.toString(), sex, allergyArray
                             )
 
                             //가입이 이루어져을시 가입 화면을 빠져나감.

@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 class HomeActivity : AppCompatActivity() {
 
     private val tabTextList = arrayListOf("질문", "카테고리", "랜덤")
+    private val tabIconList = arrayListOf(R.drawable.ic_baseline_restaurant_24, R.drawable.ic_baseline_list_24, R.drawable.ic_baseline_help_24)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar) //커스텀한 toolbar를 액션바로 사용
         supportActionBar?.setDisplayShowTitleEnabled(false) //액션바에 표시되는 제목의 표시유무를 설정합니다. false로 해야 custom한 툴바의 이름이 화면에 보이게 됩니다.
-        toolbar.title = "오늘은 이거다"
     }
 
 
@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
         homeViewpager.adapter = PagerFragmentStateAdapter(this)
         TabLayoutMediator(homeTabLayout, homeViewpager) {
                 tab, position ->
-            // tab.setIcon(tabIconList[position])
+            tab.setIcon(tabIconList[position])
             tab.text = tabTextList[position]
         }.attach()
     }
@@ -66,6 +66,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    // 뒤로가기 눌러서 나가면서 로그아웃 하기
     var lastTimeBackPressed : Long = 0
     override fun onBackPressed() {
         if(System.currentTimeMillis() - lastTimeBackPressed >= 1500){
