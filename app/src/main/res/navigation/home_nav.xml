@@ -3,27 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav"
-    app:startDestination="@id/questionFragment1">
+    app:startDestination="@id/question1Fragment">
 
     <fragment
-        android:id="@+id/questionFragment1"
+        android:id="@+id/question1Fragment"
         android:name="com.jungsoo.thisisit.Question1Fragment"
-        android:label="fragment_question"
+        android:label="fragment_question1"
         tools:layout="@layout/fragment_question1" >
         <action
             android:id="@+id/action_question1Fragment_to_question2Fragment"
             app:destination="@id/question2Fragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/randomFragment"
-        android:name="com.jungsoo.thisisit.RandomFragment"
-        android:label="fragment_random"
-        tools:layout="@layout/fragment_random" >
-        <action
-            android:id="@+id/action_randomFragment_to_question1Fragment"
-            app:destination="@id/questionFragment1" />
-    </fragment>
     <fragment
         android:id="@+id/question2Fragment"
         android:name="com.jungsoo.thisisit.Question2Fragment"
@@ -33,6 +24,7 @@
             android:id="@+id/action_question2Fragment_to_question3Fragment"
             app:destination="@id/question3Fragment" />
     </fragment>
+
     <fragment
         android:id="@+id/question3Fragment"
         android:name="com.jungsoo.thisisit.Question3Fragment"
@@ -42,6 +34,7 @@
             android:id="@+id/action_question3Fragment_to_question4Fragment"
             app:destination="@id/question4Fragment" />
     </fragment>
+
     <fragment
         android:id="@+id/question4Fragment"
         android:name="com.jungsoo.thisisit.Question4Fragment"
@@ -51,6 +44,7 @@
             android:id="@+id/action_question4Fragment_to_question5Fragment"
             app:destination="@id/question5Fragment" />
     </fragment>
+
     <fragment
         android:id="@+id/question5Fragment"
         android:name="com.jungsoo.thisisit.Question5Fragment"
@@ -60,6 +54,7 @@
             android:id="@+id/action_question5Fragment_to_question6Fragment"
             app:destination="@id/question6Fragment" />
     </fragment>
+
     <fragment
         android:id="@+id/question6Fragment"
         android:name="com.jungsoo.thisisit.Question6Fragment"
@@ -69,21 +64,12 @@
             android:id="@+id/action_question6Fragment_to_howAboutThisFragment"
             app:destination="@id/howAboutThisFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/howAboutThisFragment"
         android:name="com.jungsoo.thisisit.HowAboutThisFragment"
         android:label="fragment_how_about_this"
         tools:layout="@layout/fragment_how_about_this" >
-    </fragment>
-
-    <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.jungsoo.thisisit.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
-        <action
-            android:id="@+id/action_resultFragment_to_randomFragment"
-            app:destination="@id/randomFragment" />
     </fragment>
 
 </navigation>

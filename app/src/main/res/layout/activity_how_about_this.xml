@@ -43,10 +43,11 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/howAboutThis"
+            android:id="@+id/choosedFood"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp"
+            android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="100dp"/>
 

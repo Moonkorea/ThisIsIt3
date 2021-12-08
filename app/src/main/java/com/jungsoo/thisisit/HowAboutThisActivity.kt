@@ -612,7 +612,7 @@ class HowAboutThisActivity : AppCompatActivity() {
 
                     // 랜덤으로 음식 화면 출력하는 곳
                     val range = (0..finalFoodCnt - 1)
-                    val howAboutThis = findViewById(R.id.howAboutThis) as TextView
+                    val howAboutThis = findViewById(R.id.choosedFood) as TextView
 
 
                     if (finalFoodCnt == 0) {

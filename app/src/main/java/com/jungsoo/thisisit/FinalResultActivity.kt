@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import org.json.JSONArray
 import java.util.*
 
@@ -15,8 +16,14 @@ class FinalResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_final_result)
 
         val shareBtn = findViewById<Button>(R.id.shareBtn)
-
         val restaurantBtn = findViewById<Button>(R.id.restaurantBtn)
+
+        // 음식 결과 받아오기
+        val finalFood = intent.getStringExtra("finalresult").toString()
+
+        // 받아온 음식 결과 보여주기
+        val finalFoodName = findViewById(R.id.foodResult) as TextView
+        finalFoodName.text = finalFood
 
         shareBtn.setOnClickListener {
             val Sharing_intent = Intent(Intent.ACTION_SEND)
