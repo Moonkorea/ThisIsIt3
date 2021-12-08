@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         // 비회원으로 시작
         val btnNoLogin = findViewById<Button>(R.id.btnNoLogin)
         btnNoLogin.setOnClickListener {
-            Toast.makeText(this, "비회원으로 시작합니다.", Toast.LENGTH_LONG)
+            Toast.makeText(this, "비회원으로 시작합니다.", Toast.LENGTH_LONG).show()
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         // 회원가입
         val btnJoin = findViewById<Button>(R.id.btnRegister)
         btnJoin.setOnClickListener {
-            Toast.makeText(this, "회원가입 페이지로 이동합니다.", Toast.LENGTH_LONG)
+            Toast.makeText(this, "회원가입 페이지로 이동합니다.", Toast.LENGTH_LONG).show()
             val intent = Intent(this, JoinActivity::class.java)
             startActivity(intent)
         }
@@ -52,13 +52,13 @@ class MainActivity : AppCompatActivity() {
 
 
             if(id.length() == 0  || password.length() == 0){
-                Toast.makeText(this, "아이디 또는 패스워드를 입력해주세요.", Toast.LENGTH_LONG)
+                Toast.makeText(this, "아이디 또는 패스워드를 입력해주세요.", Toast.LENGTH_LONG).show()
             }
             if(id.length() != 0 && password.length() != 0){
                 auth!!.signInWithEmailAndPassword(id.text.toString(), password.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if(task.isSuccessful) {
-                            Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG)
+                            Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show()
                             val user = auth!!.currentUser
                             val intent = Intent(this, HomeActivity::class.java)
                             if (user != null) {
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                         else {
-                            Toast.makeText(this, "아이디 또는 패스워드를 다시 입력해주세요.", Toast.LENGTH_LONG)
+                            Toast.makeText(this, "아이디 또는 패스워드가 틀렸습니다.", Toast.LENGTH_LONG).show()
                         }
                     }
             }

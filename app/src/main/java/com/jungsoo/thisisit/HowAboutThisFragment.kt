@@ -71,21 +71,7 @@ class HowAboutThisFragment : Fragment() {
 
                                                         }
 
-                                                        /*val userallergy = arrayOf(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-                                                        for(index in 0 until jsonArray.length()){
-                                                            val jsonObject = jsonArray.getJSONObject(index)
-                                                            val allergy = jsonObject.getJSONArray("allergy")
-                                                            var j = 0
-                                                            for (i in 0 until 21) {
-                                                                if((allergy[i] == userallergy[i])&&(allergy[i]==1)){
-                                                                    j += 1
-                                                                }
-                                                            }
-                                                            if(j==0){
-                                                                foodarray[index] = jsonObject.toString()
-                                                            }
-                                                        }
-                                                        Log.d("foodarray", Arrays.toString(foodarray))*/
+
 
                                                     }
 
@@ -843,9 +829,15 @@ class HowAboutThisFragment : Fragment() {
                                 bundle.getInt("senderKey3.2").let { value ->
                                     var value1 = value
 
+                                    val three = 1
+                                    Log.d("pzx3", three.toString())
+
                                     setFragmentResultListener("Question4.1") { key, bundle ->
                                         bundle.getInt("senderKey4.1").let { value ->
                                             var value1 = value
+
+                                            val three = 1
+                                            Log.d("pzx4", three.toString())
 
                                             setFragmentResultListener("Question5.1") { key, bundle ->
                                                 bundle.getInt("senderKey5.1").let { value ->
@@ -874,7 +866,7 @@ class HowAboutThisFragment : Fragment() {
                                                             val goBtn = view.findViewById<Button>(R.id.goBtn)
                                                             goBtn.setOnClickListener {
                                                                 val intent = Intent(context, HowAboutThisActivity::class.java)
-                                                                intent.putExtra("11212", 112112)
+                                                                intent.putExtra("112112", 112112)
                                                                 startActivity(intent)
 
                                                             }

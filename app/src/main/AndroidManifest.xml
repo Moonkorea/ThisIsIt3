@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThisIsIt">
         <activity
+            android:name=".RandomFinalResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RandomHowAboutThisActivity"
+            android:exported="false" />
+        <activity
             android:name=".RandomHomeActivity"
             android:exported="false"
             android:label="@string/title_activity_random_home"
@@ -29,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".HowAboutThisActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RandomHowAboutThisActivity"
             android:exported="false" />
         <activity android:name=".MypageActivity" />
         <activity android:name=".HomeActivity" />
