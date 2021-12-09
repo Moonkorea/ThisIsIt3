@@ -17,7 +17,7 @@
 
     <Button
         android:id="@+id/randomSelectBtn"
-        android:text="랜덤 추천 받기"
+        android:text="랜덤 추천 \n받으러 가기"
         android:textSize="20sp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="100dp"

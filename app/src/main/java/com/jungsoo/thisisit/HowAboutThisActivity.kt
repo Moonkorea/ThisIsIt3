@@ -510,6 +510,7 @@ class HowAboutThisActivity : AppCompatActivity() {
                         }
                     }
 
+
                     var answerArray = arrayOf(
                         (answer % 1000000 - answer % 100000) / 100000,
                         (answer % 100000 - answer % 10000) / 10000,
@@ -528,6 +529,7 @@ class HowAboutThisActivity : AppCompatActivity() {
                         for (i in 0 until 6) {
                             if (question[i] == answerArray[i]) {
                                 j += 1
+
                             }
                         }
                         if (j == 6) {
@@ -630,105 +632,127 @@ class HowAboutThisActivity : AppCompatActivity() {
                             intent.putExtra("finalresult", finalFoodArray[randomNum])
                             startActivity(intent)
                         }
+
                     }
                 }
             } else {
 
-                // 질문 답변 받아오는 곳
-                var answer = 0
-
-                for (i in 0 until 433) {
-                    if (answerArray1[i] != 0) {
-                        answer = answerArray1[i]!!
-                        break
-                    }
-                }
-
-                var answerArray = arrayOf(
-                    (answer % 1000000 - answer % 100000) / 100000,
-                    (answer % 100000 - answer % 10000) / 10000,
-                    (answer % 10000 - answer % 1000) / 1000,
-                    (answer % 1000 - answer % 100) / 100,
-                    (answer % 100 - answer % 10) / 10,
-                    answer % 10
-                )
-
-
-                // 답변 반영 하는 곳
-                for (index in 0 until jsonArray.length()) {
-                    val jsonObject = jsonArray.getJSONObject(index)
-                    val question = jsonObject.getJSONArray("question")
-                    var j = 0
-                    for (i in 0 until 6) {
-                        if (question[i] == answerArray[i]) {
-                            j += 1
-                        }
-                    }
-                    if (j == 6) {
-                        foodQuestionArray[index] = jsonObject.get("name").toString()
-                    }
-                }
-                Log.d("test2", Arrays.toString(foodQuestionArray))
-
-
-                // 남은 음식 개수 세는 곳
-
-                var nullCntQ = 0
-
-
-
-                for (iq in 0 until jsonArray.length()) {
-                    if (foodQuestionArray[iq] == null) {
-                        nullCntQ++
-                    }
-                }
-
-                var remainFromQuestion = jsonArray.length() - nullCntQ
-
-                var questionFoodArray = arrayOfNulls<String>(remainFromQuestion)
-
-                var questioni = 0
-
-
-                for (i in 0 until jsonArray.length()) {
-                    if (foodQuestionArray[i] != null) {
-                        questionFoodArray[questioni] = foodQuestionArray[i]
-                        questioni++
-                    }
-                }
-
-                Log.d("test4", Arrays.toString(questionFoodArray))
-
-
-                // 랜덤으로 음식 화면 출력하는 곳
-                val range = (0..remainFromQuestion - 1)
-                val howAboutThis = findViewById(R.id.choosedFood) as TextView
-
-
-                if (remainFromQuestion == 0) {
-                    howAboutThis.text = "조건에 맞는 음식이 \n없습니다."
-                } else {
-                    var randomNum = range.random()
-                    howAboutThis.text = questionFoodArray[randomNum]
-
-                    val anotherBtn = findViewById<Button>(R.id.anotherBtn)
-                    anotherBtn.setOnClickListener {
-                        randomNum = range.random()
-                        howAboutThis.text = questionFoodArray[randomNum]
-                    }
-
-                    val chooseBtn = findViewById<Button>(R.id.chooseBtn)
-                    chooseBtn.setOnClickListener {
-                        val intent = Intent(this, FinalResultActivity::class.java)
-                        intent.putExtra("finalresult", questionFoodArray[randomNum])
-                        startActivity(intent)
-                    }
-                }
-
-
             }
+        }
+
+        // 비회원
+
+        // 질문 답변 받아오는 곳
+        var answer = 0
+
+        for (i in 0 until 433) {
+            if (answerArray1[i] != 0) {
+                answer = answerArray1[i]!!
+                break
+            }
+        }
+
+
+        var answerArray = arrayOf(
+            (answer % 1000000 - answer % 100000) / 100000,
+            (answer % 100000 - answer % 10000) / 10000,
+            (answer % 10000 - answer % 1000) / 1000,
+            (answer % 1000 - answer % 100) / 100,
+            (answer % 100 - answer % 10) / 10,
+            answer % 10
+        )
+
+
+        // 답변 반영 하는 곳
+        for (index in 0 until jsonArray.length()) {
+            val jsonObject = jsonArray.getJSONObject(index)
+            val question = jsonObject.getJSONArray("question")
+            var j = 0
+
+            if (question[2] == answerArray[2]) {
+                for (i in 0 until 6) {
+                    if (question[i] == answerArray[i]) {
+                        j += 1
+
+                    }
+                }
+                if (j == 6) {
+                    foodQuestionArray[index] = jsonObject.get("name").toString()
+                }
+
+            } else if (question[2] != answerArray[2] && answerArray[2] == 3){
+                for (i in 0 until 6) {
+                    if (question[i] == answerArray[i]) {
+                        j += 1
+
+                    } else if (i == 2) {
+                        j += 1
+                    }
+
+                }
+                if (j == 6) {
+                    foodQuestionArray[index] = jsonObject.get("name").toString()
+                }
+            }
+
+        }
+        Log.d("test6", Arrays.toString(foodQuestionArray))
+
+        // 남은 음식 개수 세는 곳
+
+        var nullCntQ = 0
+
+
+
+        for (iq in 0 until jsonArray.length()) {
+            if (foodQuestionArray[iq] == null) {
+                nullCntQ++
+            }
+        }
+
+        var remainFromQuestion = jsonArray.length() - nullCntQ
+
+        var questionFoodArray = arrayOfNulls<String>(remainFromQuestion)
+
+        var questioni = 0
+
+
+        for (i in 0 until jsonArray.length()) {
+            if (foodQuestionArray[i] != null) {
+                questionFoodArray[questioni] = foodQuestionArray[i]
+                questioni++
+            }
+        }
+
+        Log.d("test7", Arrays.toString(questionFoodArray))
+
+
+        // 랜덤으로 음식 화면 출력하는 곳
+        val range = (0..remainFromQuestion - 1)
+        val howAboutThis = findViewById(R.id.choosedFood) as TextView
+
+
+        if (remainFromQuestion == 0) {
+            howAboutThis.text = "조건에 맞는 음식이 \n없습니다."
+        } else {
+            var randomNum = range.random()
+            howAboutThis.text = questionFoodArray[randomNum]
+
+            val anotherBtn = findViewById<Button>(R.id.anotherBtn)
+            anotherBtn.setOnClickListener {
+                randomNum = range.random()
+                howAboutThis.text = questionFoodArray[randomNum]
+            }
+
+            val chooseBtn = findViewById<Button>(R.id.chooseBtn)
+            chooseBtn.setOnClickListener {
+                val intent = Intent(this, FinalResultActivity::class.java)
+                intent.putExtra("finalresult", questionFoodArray[randomNum])
+                startActivity(intent)
+            }
+
         }
 
     }
 
-    }
+}
