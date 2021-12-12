@@ -41,9 +41,6 @@ class RandomHomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
-
     }
 
 

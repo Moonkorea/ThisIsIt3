@@ -24,6 +24,7 @@ class CategoryHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_home)
+
         init()
 
         setSupportActionBar(toolbar_category) //커스텀한 toolbar를 액션바로 사용
@@ -35,7 +36,6 @@ class CategoryHomeActivity : AppCompatActivity() {
         categoryViewpager.adapter = CategoryFragmentStateAdapter(this)
         TabLayoutMediator(categoryTabLayout, categoryViewpager) {
                 tab, position ->
-            // tab.setIcon(tabIconList[position])
             tab.text = tabTextList[position]
         }.attach()
     }

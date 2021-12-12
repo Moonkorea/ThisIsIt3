@@ -36,6 +36,7 @@ class CategoryFragment : Fragment() {
             koreaBtn.setOnClickListener {
                 activity?.let{
                     val intent = Intent(context, CategoryHomeActivity::class.java)
+                    intent.putExtra("korea", 1)
                     startActivity(intent)
                 }
             }
@@ -43,6 +44,7 @@ class CategoryFragment : Fragment() {
             japanBtn.setOnClickListener {
                 activity?.let{
                     val intent = Intent(context, CategoryHomeActivity::class.java)
+                    intent.putExtra("japan", 2)
                     startActivity(intent)
                 }
             }

@@ -29,7 +29,7 @@ class JoinActivity : AppCompatActivity() {
 
     // 패스워드 양식 확인 함수
     fun isValidPassword(password: String): Boolean {
-        val passwordPattern = "^(?=.*[a-zA-Z])((?=.*\\d)|(?=.*\\W)).{4,12}$".toRegex()
+        val passwordPattern = "^(?=.*[a-zA-Z])((?=.*\\d)|(?=.*\\W)).{6,12}$".toRegex()
         return password.matches(passwordPattern)
     }
 
@@ -75,7 +75,7 @@ class JoinActivity : AppCompatActivity() {
             if (editWoman.isChecked)
                 sex.add("여자")
 
-            // 체크박스
+            // 알레르기
             var allergyArray = ArrayList<Int>()
 
             if (allergy1.isChecked)
@@ -181,8 +181,7 @@ class JoinActivity : AppCompatActivity() {
 
             // 비밀번호가 형식에 맞지않는 경우
             if (isValidEamil(email.text.toString()) && !isValidPassword(password.text.toString())) {
-                Toast.makeText(baseContext, "비밀번호는 4~12자리의 영문 숫자의 조합으로 입력해주세요.", Toast.LENGTH_SHORT)
-                    .show()
+                Toast.makeText(baseContext, "비밀번호는 6~12자리의 영문 숫자의 조합으로 입력해주세요.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -199,9 +198,33 @@ class JoinActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // 나이를 입력하지 않은 경우
+            if(age.length()==0) {
+                Toast.makeText(baseContext, "나이를 입력해주세요.", Toast.LENGTH_SHORT).show()
+            }
+
+            // 성별을 체크하지 않은 경우
+            if(!editMan.isChecked && !editWoman.isChecked) {
+                Toast.makeText(baseContext, "성별을 선택해주세요.", Toast.LENGTH_SHORT).show()
+            }
+
+            // 성별을 모두 체크한 경우
+            if(editMan.isChecked && editWoman.isChecked) {
+                Toast.makeText(baseContext, "성별은 하나만 선택해주세요.", Toast.LENGTH_SHORT).show()
+            }
+
+            // 알레르기 정보를 모두 체크한 경우
+            if(allergy1.isChecked && allergy2.isChecked && allergy3.isChecked && allergy4.isChecked &&allergy5.isChecked && allergy6.isChecked && allergy7.isChecked &&
+                allergy8.isChecked && allergy9.isChecked && allergy10.isChecked && allergy11.isChecked && allergy12.isChecked && allergy13.isChecked && allergy14.isChecked &&
+                allergy15.isChecked && allergy16.isChecked && allergy17.isChecked && allergy18.isChecked && allergy19.isChecked && allergy20.isChecked && allergy21.isChecked &&
+                allergy22.isChecked) {
+                Toast.makeText(baseContext, "본 앱을 이용하는데 애로사항이 발생할 수 있습니다.", Toast.LENGTH_SHORT).show()
+            }
+
             // 회원가입
             if ( isValidEamil(email.text.toString()) && isValidPassword(password.text.toString()) && passwordCheck(password.text.toString(), passwordre.text.toString())
-                        && nickname.length() != 0 && age.length() != 0) {
+                        && nickname.length() != 0 && age.length() != 0 && ((editMan.isChecked && !editWoman.isChecked) || (!editMan.isChecked && editWoman.isChecked))
+                    ) {
                 auth!!.createUserWithEmailAndPassword(
                     email.text.toString(),
                     password.text.toString()
@@ -220,7 +243,7 @@ class JoinActivity : AppCompatActivity() {
                             startActivity(intent)
                             Toast.makeText(baseContext, "회원가입 성공", Toast.LENGTH_SHORT).show()
                         } else {
-                            Toast.makeText(baseContext, "회원가입 실패.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(baseContext, "이미 사용중인 아이디입니다.", Toast.LENGTH_SHORT).show()
                             return@addOnCompleteListener
                         }
                     }

@@ -126,7 +126,7 @@ class RandomHowAboutThisActivity : AppCompatActivity() {
 
         val chooseBtn = findViewById<Button>(R.id.chooseBtn)
         chooseBtn.setOnClickListener {
-            val intent = Intent(this, FinalResultActivity::class.java)
+            val intent = Intent(this, RandomFinalResultActivity::class.java)
             intent.putExtra("finalresult", foodRandomArray[randomNum])
             startActivity(intent)
         }
